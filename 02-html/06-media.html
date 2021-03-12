@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media:html</title>
+</head>
+
+<body>
+    <h1>html media</h1>
+
+    <h2>video</h2>
+    <video src="./images/mov_bbb.mp4" controls autoplay muted>
+    <!-- control은 비디오의 재생바, 전체화면 등의 툴이 뜨도록 하는 옵션이며 autoplay는 자동재생,  muted는
+    음소거를 말한다. -->
+    </video>
+
+    <video width="310" src="./images/videoplayback.mp4" controls autoplay muted>
+    </video>
+    <!-- 기존의 스타일에서 폭과 높이를 설정할 때는 px 단위를 붙여야 하지만 비디오의 속성으로 폭과 높이를 설정
+    할 때에는 단위를 넣지 않는다. -->
+
+    <hr>
+
+    <h2>youtube</h2>
+
+    <iframe width="797" height="448" src="https://www.youtube.com/embed/1HAGuju_yKY" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+    </iframe>
+    <!-- 유튜브 동영상 위에 커서 올리고 마우스 오른쪽 > 소스코드 복사 > VS코드에 붙여넣기-->
+    <!-- 크기 조절 시 비례하게 줄거나 늘지 않기 때문에 가로 세로 사이즈 유지 해야됨(css에서 작업해야 함.)-->
+
+    <hr>
+    
+    <h2>audio</h2>
+    <audio src="./images/horse.mp3" controls>
+    </audio>
+
+
+
+</body>
+
+</html>
