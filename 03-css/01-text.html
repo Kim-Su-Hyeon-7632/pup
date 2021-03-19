@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text :css</title>
+</head>
+<body>
+    <h1>css text</h1>
+
+    <h2>말줄임</h2>
+    <ul class="lst-news">
+        <li><a href="#">김여정, 남죽군사합의 파기 거론... 한미훈련 겨냥</a></li>
+        <li><a href="#">75세 이상 다음 달 화이자... 초등 교사도 접종</a></li>
+        <li><a href="#">'미나리' 오스카 6개 후보, 윤여정, 여우조연상 후보</a></li>
+        <li><a href="#">악성 뇌종양 치료법 실마리...</a></li>
+        <li><a href="#">75세 이상 다음 달 화이자... 초등 교사도 접종</a></li>
+    </ul>
+    <style>
+        .lst-news a {
+            display: block;
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</body>
+</html>

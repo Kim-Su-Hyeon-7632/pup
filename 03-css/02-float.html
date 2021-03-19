@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float : css</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            font-size: 14px; line-height: 1.5; color: rgb(3, 3, 3);
+            list-style: none; text-decoration: none;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>float</h1> -->
+    <h2>1. float</h2>
+
+    <header>
+        <h1>logo</h1>
+        <nav id="gnb">
+            <ul class="nav-depht1 clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </nav>
+        <div class="lang">
+            <ul class="lst-lang">
+                <li><a href="#">kor</a></li>
+                <li><a href="#">eng</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <ul class="box">
+                <li><a href="#">box1</a></li>
+                <li><a href="#">box2</a></li>
+                <li><a href="#">box3</a></li>
+                <li><a href="#">box4</a></li>
+                <li><a href="#">box5</a></li>
+                <li><a href="#">box6</a></li>
+                <li><a href="#">box7</a></li>
+                <li><a href="#">box8</a></li>
+                <li><a href="#">box9</a></li>
+            </ul>
+            <ul class="box2">
+                <li><a href="#">box1</a></li>
+                <li><a href="#">box2</a></li>
+                <li><a href="#">box3</a></li>
+                <li><a href="#">box4</a></li>
+                <li><a href="#">box5</a></li>
+                <li><a href="#">box6</a></li>
+                <li><a href="#">box7</a></li>
+                <li><a href="#">box8</a></li>
+                <li><a href="#">box9</a></li>
+            </ul>
+        </main>
+        <aside>사이드</aside>
+    </div>
+    <footer class="clearfix">
+        <h1>로고</h1>
+        <div class="copyright">copyright</div>
+        <div class="sns">sns</div>
+    </footer>
+    <br>
+    <style>
+        header  {
+            /* padding: 20px; */
+            height: 100px; /* 1. 엄마 개체에게 높이값을 넣어준다. */
+            background-color: #eee;
+            text-align: center;
+            /* !!!!!!!!!!!!!엄마한테 가운데 정렬(텍스트 얼라인)적용해야 됨!!!!!!!!!!! */
+            padding-top: 35px;
+        }
+        h1 {
+            background-color: rgb(250, 199, 199);
+            float: left;
+            height: 30px;
+         }
+        nav {
+            /* float: right; */
+            display: inline-block;
+            /* width: 40%; */
+            
+            background-color: rgb(226, 98, 98);
+        }
+        .nav-depht1 li {
+            float: left;
+        }
+        .nav-depht1 a {
+            display: block;
+            padding: 5px;
+        }
+        .lang {
+            float: right;
+            background-color: rgb(79, 191, 199);
+            height: 30px;
+        }
+        .lst-lang li{
+            float: left;
+        }
+        /* 플로트 라이트는 오른쪽 정렬이 아니라 오른쪽 부터 붙는다고 생각하면 됨(왼쪽과 거꾸로 정렬됨) 
+        오른쪽에 떠 있는 개체를 가로정렬 하고 싶을 때는 엄마개체에 플로트 라이트를 써서 오른쪽을 붙인 후 플로트 레프트로 가로정렬을 해주면 된다. */
+        .container {
+            overflow: hidden; /* 2. 높이값을 넣을 수 없는 영역에는 엄마 개체에 overflow hidden 속성을 넣는다.  ex) 네이버 뉴스 피드*/
+            /* 여기서 오버플로우 히든은 플로트를 해체하는 역할을 함. */
+            background-color: rgb(196, 196, 196);
+        }
+        main {
+            overflow: hidden;
+            float: left;
+            /* height: 500px; */
+            width: 70%;
+            background-color: rgb(136, 161, 218);
+        }
+        .box {
+            overflow: hidden;
+        }
+        .box li{
+            width: 50px; height: 50px;
+            float: left;
+            width: 30%;
+            border: 3px solid rgb(255, 255, 255);
+            margin-right: 5%;
+        }
+        .box li:nth-child(3n) /* 3.6.9~ */ {
+            margin-right: 0;
+        }
+        /* 3의 배수의 아이들을 잡아서 일괄로 설정 = :nth-child(3n) */
+        .box a {
+            display: block;
+            height: 100%;
+            /* 가로 백 세로 백 */
+        }
+
+        /* bootstrap 정렬 */
+        .box2 {
+            overflow: hidden;
+            margin: 20px -5px 0;
+        }
+
+        .box2 li{
+            float: left;
+            width: 33.333%;
+            padding: 0 5px;
+            /* background-color: rgb(48, 95, 139);
+            border: 1px solid rgb(255, 255, 255); */
+        }
+        .box2 a{
+            background-color: rgba(189, 179, 179, 0.753);
+            display: block;
+            border: 1px solid #000;
+        }
+        aside {
+            float: right;
+            /* height: 500px; */
+            width: 28%;
+            background-color: rgb(150, 106, 150);
+        }
+        footer {
+            background-color: rgb(151, 228, 131);
+            text-align: center;
+        }
+        /* 위에 h1에서 동일하게 플로트 레프트가 먹혀서 안써도 됨 */
+        .copyright {
+            /* float: left; */
+            /* clear: both; float clear */
+            display: inline-block;
+
+            background-color: rgb(53, 163, 158);
+        }
+        .sns {
+            float: right;
+            background-color: rgb(255, 240, 28);
+        }
+        /* 3. clearfix 처리 = 부모가 자식을 인식하지 못하기 때문에 가상의 공간을 만들어 인식할 수 있게 해준다. */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        /* both-왼쪽 또는 오른쪽에 플로팅 요소가 허용되지 않습니다. */
+    </style>
+</body>
+</html>

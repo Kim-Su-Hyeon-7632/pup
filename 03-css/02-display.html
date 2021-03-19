@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display :css</title>
+</head>
+<body>
+    <h1>css display</h1>
+    <h2>1.display : inline-block</h2>
+
+    <!-- block : 가로 세로 값을 가질 수 있고 밑으로 떨어짐
+     기본이 가로 100% 값을 가짐 -->
+     <!-- inline(텍스트) : 가로 세로 값을 가질 수 없고 옆으로 붙는다. -->
+     
+    <ul class="lst-display">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+    </ul>
+    <style>
+        .lst-display {
+            list-style: none;
+            margin: 0 auto; padding: 0;
+            text-align: center;
+            /* 디스플레이 플렉스일 때만 저스티파이, 얼라인 아이템이 먹음
+            플렉스는 i9밑이 호환이 안되기 때문에 플로어트를 써야 함. 그렇기 때문에 인라인 블럭 속성으로 만들고 텍스트 얼라인을 사용함. */
+        }
+        .lst-display li{
+            display: inline-block;
+            /* float: left; */
+            /* inline이 포함되면 텍스트로 생각하기 */
+        }
+        .lst-display a {
+            display: block;
+            width: 100px; height: 50px;
+            background-color: rgb(133, 173, 20);
+            text-align: center;
+            line-height: 50px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        /* 텍스트를 a 태그를 기준으로 가로 가운데 정렬을 하고 싶으면 텍스트 얼라인, 세로 가운데 정렬은 라인 하이트, 
+        링크 밑 선을 지우고 싶다면 텍스트 데코레이션을 none으로 설정하면 된다. */
+    </style>
+
+    <hr>
+    <h2>2. display : none</h2>
+    <div class="layer">레이어</div>
+    <style>
+        .layer {
+            width: 300px; height: 300px;
+            background-color: rgb(255, 196, 196);
+            display: block;
+        }
+        /* 웹 접근성에는 display:none을 사용하면 스크린 리더가 읽지 못한다. */
+        .layer:hover {
+            background-color: rgb(154, 59, 173);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fontsize :css</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0; padding: 0;
+            list-style: none; text-decoration: none;
+            font-size: 12px; line-height: 1.5; color: black;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif, serif;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>css font size</h1>
+
+    <h2>1. px 단위(절대값)</h2>
+    <div class="size-1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim expedita cumque odit! 
+        Voluptatem quibusdam tempore ducimus tenetur quisquam voluptatibus commodi aut esse, 
+        rerum nostrum asperiores laudantium earum dolore hic corrupti.
+    </div>
+    <style>
+        .size-1 {
+            font-size: 14px;
+        }
+    </style>
+
+    <hr>
+    <h2>2. em 단위(상대값)</h2>
+    <ul>
+        <li>안녕하세요. <strong>더조은 컴퓨터 바리스타</strong> 학원입니다.</li>
+        <li><strong>더조은 컴퓨터</strong>에서 공지합니다.</li>
+        <li><strong>웹디자인(퍼블리싱)</strong> 오픈 합니다.</li>
+    </ul>
+    <style>
+        ul li:first-child {
+            font-size: 14px;
+        }
+        ul li:first-child strong {
+            font-size: 28px;
+        }
+
+        /* 기준 폰트 12px */
+
+        ul li:nth-child(2) { font-size:1.333em;}
+        /* 16px*/
+        ul li:nth-child(2) strong { font-size: 2.667em;} /*32px */
+
+        ul li:nth-child(3) { font-size: 2em;} 
+        /* 자식em은 부모기준 */
+        /* rem 단위는 reset 기준(부모기준 X) */
+        ul li:nth-child(3) strong { font-size: 2rem;} 
+        /* 위 리셋 값에 폰트 사이즈가 없을 경우 크롬의 기본 단위 16px이 1em이라고 알 수 있다. */
+    </style>
+
+    <hr>
+    <h2>3. vw, vh 단위(뷰포트 기준)</h2>
+    <div class="size-3">가나다라마바사</div>
+    <style>
+        .size-3 {
+            width: 100vw; /* viewport width는 디폴트 값이 가로 100퍼센트이기 때문에 거의 쓰지 않는다.(스크롤바가 생기기 때문)*/
+            height: 100vh;  /* viewport height */
+            background-color: #eee;
+            font-size: 10vw;
+        }
+    </style>
+    <br>
+</body>
+</html>
