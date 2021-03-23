@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>position :css</title>
+    <title>position : css</title>
 </head>
 <body>
     <h1>position</h1>
-    <br><br>
+
+    <br><br><br>
     <div class="box5">sticky</div>
-    <br><br>
+    
     <div class="wrap">
         <div class="inner">
             <div class="box1">fixed</div>
@@ -18,52 +19,47 @@
             <div class="box3">absolute</div>
             <div class="box4">absolute center</div>
             <div class="box6"></div>
-        </div>  
+        </div>
     </div>
+
     <style>
-        .box1 {
-            background-color: rgba(226, 149, 118, 0.692);
-            position: fixed; top: 0; left: 0; right: 0;
-            height: 30px;
-            z-index: 100;
-            /* width: 100%; */
-        }
         .box2 {
-            background-color: #fff;
-            position: fixed; top: 50%; right: 0;
-            width: 30px; height: 110px; margin-top: -50px;
-            color: rgb(2, 2, 2);
-            writing-mode: vertical-lr;
-            z-index: 1;
+            position: fixed;right: 0; top: 50%;z-index: 100;
+            width: 30px; height: 100px; margin-top: -50px;
+            background: #000; color: #fff;
+            writing-mode:vertical-lr;
         }
-        .box3 {
-            width: 80px;height: 30px;
-            background-color: rgb(148, 66, 66);
-            color: #fff;
-            position: absolute; bottom: 0; right: 0;
-        }
-        /*  position: absolute은 꼭 부모를 기준으로 변경해야 한다. */
-        /* position: absolute; top: 0; left: 0;,  기준이 되는 엄마 스타일에  position: relative; 꼭 넣기*/
-        .box4 {
-            width: 100px; height: 100px;
-            background-color: rgb(165, 32, 32); color: #fff;
-            position: absolute; top: 50%; left: 50%; margin: -50px 0 0 -50px;
-        }
-        .box5 {
-            position: sticky; top: 0; 
-            height: 50px; background-color: rgb(145, 201, 42);
-            z-index: 200;
+        /* fixed gnb */
+        .box1 {
+            position: fixed; top: 0; left: 0;right: 0; z-index: 100;
+            /* width: 100%; */ height: 50px;
+            background: rgba(60, 179, 114, 0.7);
         }
         .wrap {
             position: relative;
-            background-color: rgb(226, 204, 204);
-            height: 100vh;
+            height: 100vh; 
+            background: lightpink;
         }
-        /* 높이 100퍼센트는 부모를 기준으로 100퍼센트를 맞춰주기 때문에 부모가 꽉 차있지 않는다면 불가함.
-        vh 를 넣으면 뷰포트의 100, 꽉 채워준다. */
+        .box3 {
+            position: absolute; bottom: 0; right: 0;
+            width: 50px; height: 50px;
+            background: red;
+        }
+        .box4 {
+            position: absolute; top: 50%;left: 50%;
+            width: 100px; height: 100px; margin: -50px 0 0 -50px;
+            background: SlateBlue;
+        }
+        .box5 {
+            position: -webkit-sticky; 
+            position: sticky; top: 0; z-index: 200;
+            height: 50px;
+            background: Violet;
+        }
     </style>
-    <br><br><br><br><br><br>
-    <br><br><br><br><br><br>
-    <br><br>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
 </body>
 </html>

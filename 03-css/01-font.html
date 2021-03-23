@@ -5,43 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>font : css</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="./css/comm.css">
-   <!-- 구글 폰트 내의 link를 html에 바로 연결하는 방법과 css에 import 링크를 연결하여 html에 링크로 불러오는 것 두가지 방법이 있다. 
-link를 html에 연결하는 것을 많이 사용하지만, css의 링크를 불러오는 것이 컨트롤하기가(폰트바꾸기, 기타 설정 변경) 더 수월하다.-->
-   <style>
-        body {
-            font-family: 'Raleway', sans-serif;
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/comm.css">
+    <style>
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+</style>
 </head>
 <body>
-    <h1>css font</h1>
-    <p class="txt-1">Lorem 
-        <span>ipsum dolor sit</span> amet consectetur, adipisicing elit. Harum sit excepturi, qui veritatis itaque assumenda error velit.
-    Perferendis in excepturi omnis consectetur fuga, molestias, nemo quod suscipit dolor error quaerat?</p>
-    <strong class="tit">Hello, I'm title! Harum sit excepturi, qui veritatis itaque assumenda error velit.</strong>
+    <strong class="tit">나는 타이틀이야</strong>
+    <h1>font</h1>
+
+    <p class="txt-1">
+        Lorem <span>ipsum dolor sit amet</span> consectetur adipisicing elit. Reiciendis est deserunt magni quisquam et aliquam recusandae optio accusantium voluptatum, quo aspernatur consequatur blanditiis tempora modi iusto odio magnam aliquid aperiam.
+    </p>
     <style>
+        .tit {
+            font-weight: bold;
+        }
         .txt-1 {
             font-family: 'Nanum Myeongjo', serif;
-            font-size: 30px;
+            /* font-size: 40px; */
         }
-       .txt-1 span {
-            color: rgb(38, 189, 156);
+        .txt-1 span {
+            color: red;
         }
-        .tit {
-            font-weight: normal;
-        }
-        /* 볼드체는 폰트 웨이트, 명조체나 이탈릭은 폰트 스타일 변경을 하면 된다. */
     </style>
 
-    <hr>
-    <h2>웹폰트 만들기</h2>
 
-    <p class="txt-square">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vitae voluptatibus modi beatae, velit ea ad fugiat laborum tempora, repellendus impedit neque soluta itaque voluptatum pariatur iste libero vero asperiores.
-    </p>
-    
+
 </body>
 </html>

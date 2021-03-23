@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation : css</title>
+</head>
+<body>
+    <h1>animation</h1>
+
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="cercle1"></div>
+    </div>
+    <style>
+       .wrap {
+           display: block;
+           width: 800px; height: 500px;
+           background-color: #eee;
+           position: relative;
+           overflow: hidden;
+       }
+       .wrap .box1 {
+           background-color: rgb(136, 190, 252);
+           width: 200px; height: 200px;
+           display: inline-block;
+           position: absolute; top: 0; left: -200px;
+           opacity: 0.5;
+           animation-name: box;
+           animation-duration: 1s;
+           animation-fill-mode: forwards;
+       }
+       .wrap .cercle1 {
+            background-color: rgb(255, 206, 214);
+           width: 200px; height: 200px;
+           border-radius: 200px;
+           transform: scale(1.2);
+           display: inline-block;
+           position: absolute; top: 300px; left: 850px;
+            opacity: 0.5;
+            animation-name: cercle;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+       }
+       @keyframes box {
+           0% {top: 0; left: 0;}
+           100% {top: 50%; left: 250px; transform: translateY(-50%); rotate:150deg ;}
+       }
+       @keyframes cercle {
+           0% {top: 300px; left: 850px;}
+           100% {top: 150px; left: 300px;}
+       }
+    </style>
+</body>
+</html>

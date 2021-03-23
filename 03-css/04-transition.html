@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition : css</title>
+</head>
+<body>
+    <h1>transition</h1>
+    <div class="wrap">
+        <div class="t1">1</div>
+        <div class="t2">2</div>
+        <div class="t3">3</div>
+    </div>
+    <style>
+        .wrap {
+            width: 400px; height: 150px;
+            display: flex;
+            background-color: rgb(124, 74, 74);
+            align-items: center;
+            justify-content: space-around;
+            /* transform: scale(1.5);
+            transform-origin: 0 0; */
+            overflow: hidden;
+        }
+        .wrap div {
+            width: 100px; height: 100px;
+            display: inline-block;
+            background-color: #eee;
+            text-align: center; line-height: 100px;
+            color: rgb(124, 74, 74); font-size: 2em;
+            transition: /* transform 1s, opacity 1s; */ all 1s;
+        }
+        .t1 {
+            transform: translate(0px, 130px);
+            opacity: 0;
+        }
+        .t2 {
+            transform: translate(0px, -130px) rotate(179deg);
+        }
+        .t3  {
+            transform: translate(120px, 0px) rotate(0deg); opacity: 0.5;
+        }
+        .wrap:hover div{
+            transform: translate(0px, 0px);
+        }
+        .wrap:hover .t1 {
+            opacity: 1;
+        }
+        .wrap:hover .t2 {
+            transition-delay: 1s;
+        }
+        .wrap:hover .t3 {
+            transition-delay: 2s;
+            opacity: 1;
+        }
+    </style>
+</body>
+</html>
