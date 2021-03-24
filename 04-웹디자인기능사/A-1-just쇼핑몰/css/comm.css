@@ -9,7 +9,6 @@
   box-sizing: border-box;
   list-style: none;
 }
-
 /* comm */
 .blind {
   overflow: hidden;
@@ -152,7 +151,7 @@ nav:hover .nav-depth2, nav:hover .nav-bg{
 
 .container .tab {
   display: flex;
-
+  
 }
 /* 탭 안에 있는 컨텐츠 두개를 정렬하고 싶을 때는 엄마 속성인 탭에게 
 디스플레이 적용함 */
@@ -193,7 +192,7 @@ nav:hover .nav-depth2, nav:hover .nav-bg{
 }
 .sec-gallery a {
   display: block;
-
+  
 }
 .sec-gallery img {
   width: 100%;
@@ -256,4 +255,40 @@ footer {
 .lst-sns a {
   display: block;
   padding: 20px; color: #fff;
+}
+.modal-wrap {
+  display: none; 
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal-wrap .inner {
+  width: 668px; height: 553px;
+  position: relative;
+}
+.modal-wrap img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 33px;
+  /* overflow: hidden; */
+}
+.modal-wrap button {
+  /* position: fixed; top: 20px; left: 910px; right: 0; bottom: 10px; */
+  position: absolute; top: -20px; right: -20px;
+  background-color: #fff;
+  width: 70px; height: 70px; border-radius: 50%;
+  /* z-index: 101; */
+  border: none;
+  cursor: pointer;
+  display: flex; justify-content: center; align-items: center;
+  /* input은 커서모양이 손가락으로 자동 설정이 안되기 때문에 따로 설정해 줘야 한다. */
+  /* 닫기 대신에 엑스 모양을 넣고 싶을 떄에는 백그라운드 이미지로 넣고 텍스트는 없애준다.(텍스트 인덴트-9999) */
+  /* 라인어썸 써도 됨 */
+}
+.modal-wrap i{
+  font-size: 2em;
+  /* display: block;
+  margin-top: 20px; */
 }
